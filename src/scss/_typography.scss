@@ -1,0 +1,13 @@
+@use "variables" as v;
+@use "mixins" as mixin;
+
+// Headlines
+
+// Overline
+.overline {
+    font-size: v.$font-small;
+    font-weight: 700;
+    line-height: 1.3125rem; // 21px
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}

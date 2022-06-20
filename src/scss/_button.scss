@@ -1,0 +1,25 @@
+@use "variables" as v;
+
+// Buttons
+
+button, .button {
+    border: 1px solid v.$white;
+    border-radius: 50px;
+    padding: .8rem 2rem;
+    color: v.$white;
+    font-size: v.$font-small;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    &--transparent {
+        background-color: transparent;
+    }
+
+    &--green {
+        background-color: v.$brand-green;
+    }
+
+    &--white {
+        background-color: v.$white;
+    }
+}

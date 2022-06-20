@@ -1,0 +1,49 @@
+@use "variables" as v;
+@use "mixins" as mixin;
+
+a, a:visited, a:hover, a:active {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    font-size: v.$font-regular;
+    font-weight: 400;
+    color: v.$gray-paragraph;
+}
+
+.container {
+    max-width: 70rem; // 1120px
+    margin: 0 auto;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+// Flex
+.flex {
+    display: flex;
+
+    &-jc-sb {
+        justify-content: space-between;
+    }
+
+    &-ai-center {
+        align-items: center;
+    }
+}
+
+// Visibitily
+.hide-for-mobile {
+    // hide for tablet and mobile
+    @include mixin.breakpoint-down(medium) {
+        display: none;
+    }
+}
+
+.hide-for-desktop {
+    // hide for desktop viewport widths
+    @include mixin.breakpoint-up(large) {
+        display: none;
+    }
+}

@@ -1,0 +1,26 @@
+@use "variables" as v;
+@use "mixins" as mixin;
+
+.header {
+    background-color: v.$brand-green;
+    padding: 1rem;
+
+    &__links {
+
+        a {
+            color: v.$brand-lighter-green;
+            opacity: 0.6;
+            transition: opacity .3s ease-in-out;
+
+            &:hover {
+                color: v.$white;
+                opacity: 1;
+            }
+        }
+
+        @include mixin.breakpoint-up(large) {
+            display: flex;
+            gap: 2rem;
+        }
+    }
+}
